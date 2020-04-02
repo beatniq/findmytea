@@ -18,12 +18,10 @@ resource "heroku_app" "default" {
 resource "heroku_build" "default" {
   app = heroku_app.default.name
   source = {
-    url = "https://github.com/beatniq/findmytea/tarball/master"
+    url = "https://github.com/beatniq/findmytea-ui/tarball/master"
   }
 }
 
 output "app_url" {
   value = "https://${heroku_app.default.name}.herokuapp.com"
 }
-
-

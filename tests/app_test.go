@@ -12,7 +12,7 @@ import (
 func TestApp(t *testing.T) {
 
 	opts := &terraform.Options{Vars: map[string]interface{}{
-		"app_name": "beatniq-findmytea-terraform-tdd",
+		"app_name": "beatniq-findmytea-terraform",
 	},
 		TerraformDir: "../modules"}
 
