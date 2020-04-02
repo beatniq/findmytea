@@ -3,7 +3,7 @@ provider "heroku" {
 }
 
 variable "app_name" {
-  description = "The name of the app."
+  description = "Test heroku TDD app."
 }
 
 resource "heroku_app" "default" {
@@ -18,7 +18,7 @@ resource "heroku_app" "default" {
 resource "heroku_build" "default" {
   app = heroku_app.default.name
   source = {
-    url = "https://bitbucket.org/teapigsteam/findmytea-ui/get/master.tar.gz"
+    url = "https://github.com/beatniq/findmytea/tarball/master"
   }
 }
 
